@@ -6,6 +6,17 @@ const Home = () => {
 
   const [input_state, setInput] = useState(''); //creating state object
   const [results, setResult] = useState(null); //creating state object for storing array of search results
+  const [searchOption, setSearchOption] = useState('shows'); //creating state to store radio button result
+
+  const isShowsChecked=searchOption;
+  let checkedopt;
+
+  if(isShowsChecked==='shows'){
+    checkedopt=true;
+  }
+  else{
+    checkedopt=false;
+  }
 
   const onEventChange = (event_obj) => {
     setInput(event_obj.target.value); //updating the state
@@ -13,7 +24,7 @@ const Home = () => {
 
   const onSearch = () => {
 
-    api_funct(`/search/shows?q=${input_state}`).then(result => {
+    api_funct(`/search/${searchOption}?q=${input_state}`).then(result => {
       setResult(result);
     })
   }
@@ -23,14 +34,26 @@ const Home = () => {
        onSearch();
     }
   }
+  const onRadioChange =(event_obj) => {
+    setSearchOption(event_obj.target.value);
 
+  }
+  console.log(searchOption);
+
+  console.log(results);
+  
   const displayResult = () => {
     if (results && results.length === 0) {
       return "no results found";
     }
     if (results && results.length >0){
 
-      return results.map((item) => <div key={item.show.id}>{item.show.name}</div>) 
+      return results[0].show ? results.map((item) => 
+      <div key={item.show.id}> {item.show.name}
+      </div>) : results.map((item) => 
+
+      <div key={item.person.id}>{item.person.name}
+      </div>)
 
     }
 
@@ -38,8 +61,15 @@ const Home = () => {
   }
   return (
     <MainPageLayout>
-     <input type='text' onChange={onEventChange} value={input_state} onKeyDown={onKeyDown} /> 
+     <input type='text' onChange={onEventChange} value={input_state} onKeyDown={onKeyDown} placeholder="search for something" /> 
      <button type='button' onClick={onSearch}>Search</button>
+     <div>
+       <label htmlFor="shows-search">shows</label>
+       <input id="shows-search" type="radio" value="shows" onChange={onRadioChange} checked={checkedopt}/>
+
+       <label htmlFor="actors-search">actors</label>
+       <input id="actors-search" type="radio" value="people" onChange={onRadioChange} checked={!checkedopt}/>
+     </div>
      <div><h4>{displayResult()}</h4></div>
     </MainPageLayout>
   )
