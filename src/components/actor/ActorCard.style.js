@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {SearchCard} from '../styled'
+import {SearchCard} from '../styles'
 
 export const StyledActorCard = styled(SearchCard)`
 .deathday {
@@ -7,4 +7,4 @@ export const StyledActorCard = styled(SearchCard)`
     margin-top: 15px;
     font-weight: bold;
   }
-`;
+`

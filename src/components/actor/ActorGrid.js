@@ -1,7 +1,7 @@
 import React from 'react'
 import ActorCard from './ActorCard'
 import notfound from '../images/not-found.png'
-import { FlexGrid } from '../styled'
+import { FlexGrid } from '../styles'
 
 const ActorGrid = ({data}) => {
   return (
@@ -13,6 +13,7 @@ const ActorGrid = ({data}) => {
       country={person.country ? person.country.name : null}
       birthday={person.birthday}
       gender={person.gender}
+      deathday={person.deathday}
       />))}
       </FlexGrid>
   )

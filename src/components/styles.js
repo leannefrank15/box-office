@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const FlexGrid = styled.div `
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
-`
+`;
 
 export const SearchCard = styled.div `
 width: 300px;
@@ -12,8 +12,17 @@ width: 300px;
   margin: 0 15px 40px;
 
   .img-wrapper {
-    border-radius: 15px;
-    width: 80%;
+    width: 85%;
+    border-radius: 40px;
+    height: 360px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 
 
