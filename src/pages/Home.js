@@ -57,6 +57,7 @@ const Home = () => {
     return null;  // if neither of the conditions suffice , it'll return nothing
   }
   return (
+  
     <MainPageLayout>
      <input type='text' onChange={onEventChange} value={input_state} onKeyDown={onKeyDown} placeholder="search for something" /> 
      <button type='button' onClick={onSearch}>Search</button>
@@ -69,6 +70,7 @@ const Home = () => {
      </div>
      <div><h4>{displayResult()}</h4></div>
     </MainPageLayout>
+    
   )
 }
 

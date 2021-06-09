@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { StyledShowCard } from './ShowCard_styled';
 
 const ShowCard = ({ id, image, name, summary }) => {
   
@@ -8,21 +9,21 @@ const ShowCard = ({ id, image, name, summary }) => {
     : 'No description';
 
   return (
-    <div>
+    <StyledShowCard>
       <div>
-        <img src={image} alt="show" />
+        <img src={image} alt="show" className='img-wrapper'/>
       </div>
 
       <h1>{name}</h1>
 
-      <p style={{fontWeight: 'normal'}}>{summaryAsText}</p>
+      <p style={{fontWeight: 'normal'}}>{summaryAsText}</p><br/>
 
-      <div style={{marginBottom: '10px'}}>
-        <Link style={{textDecoration: 'none'}} to={`/show/${id}`}>Read more</Link>
-        <button style={{marginLeft: '10px', backgroundColor: 'lightgrey', fontWeight: 'bold'}} type="button">Star Me</button>
+      <div className='btns'>
+        <Link style={{textDecoration: 'none', marginRight: '25px'}} to={`/show/${id}`}>Read more</Link>
+        <button style={{marginLeft: '40px'}}type="button">Star Me</button>
       </div>
-    </div>
-  );
-};
+    </StyledShowCard>
+  )
+}
 
 export default ShowCard
