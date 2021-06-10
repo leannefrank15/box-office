@@ -4,6 +4,7 @@ import MainPageLayout from '../components/MainPageLayout'
 import ShowGrid from '../components/show/ShowGrid';
 import {api_funct} from '../misc/config'
 import { useLastQuery } from '../misc/custom-hooks';
+import { RadioInputsWrapper, SearchButtonWrapper, SearchInput } from './Home.styled';
 
 const Home = () => {
 
@@ -11,8 +12,8 @@ const Home = () => {
   const [results, setResult] = useState(null); //creating state object for storing array of search results
   const [searchOption, setSearchOption] = useState('shows'); //creating state to store radio button result
 
-  const isShowsChecked=searchOption;
-  let checkedopt;
+   const isShowsChecked=searchOption;
+   let checkedopt;
 
   if(isShowsChecked==='shows'){
     checkedopt=true;
@@ -47,7 +48,7 @@ const Home = () => {
 
   const displayResult = () => {
     if (results && results.length === 0) {
-      return "no results found";
+      return <div style={{textAlign: 'center'}}> No results found</div>
     }
     if (results && results.length >0){
 
@@ -60,15 +61,40 @@ const Home = () => {
   return (
   
     <MainPageLayout>
-     <input type='text' onChange={onEventChange} value={input_state} onKeyDown={onKeyDown} placeholder="search for something" /> 
-     <button type='button' onClick={onSearch}>Search</button>
-     <div>
-       <label htmlFor="shows-search">shows</label>
-       <input id="shows-search" type="radio" value="shows" onChange={onRadioChange} checked={checkedopt}/>
+     <SearchInput type='text' onChange={onEventChange} value={input_state} onKeyDown={onKeyDown} placeholder="search for something" /> 
+  
+     
 
-       <label htmlFor="actors-search">actors</label>
-       <input id="actors-search" type="radio" value="people" onChange={onRadioChange} checked={!checkedopt}/>
-     </div>
+       <RadioInputsWrapper>
+
+         <label htmlFor="shows-search" >
+           Shows
+           </label>
+           <input type="radio" 
+           id="shows-search" 
+           value="shows" 
+           onChange={onRadioChange} 
+           checked={checkedopt}
+           style={{
+             marginRight: '15px',
+           }}
+           />
+         
+
+       <label htmlFor="actors-search">
+           Actors
+       </label>
+           <input type="radio" 
+           id="actors-search" 
+           value="people" 
+           onChange={onRadioChange} 
+           checked={!checkedopt}
+           />
+       </RadioInputsWrapper>
+       <SearchButtonWrapper>
+     <button type='button' onClick={onSearch}>Search</button>
+     </SearchButtonWrapper>
+
      <div><h4>{displayResult()}</h4></div>
     </MainPageLayout>
     
@@ -76,3 +102,4 @@ const Home = () => {
 }
 
 export default Home
+

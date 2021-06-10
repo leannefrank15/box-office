@@ -31,7 +31,7 @@ export const ShowGrid = ({data}) => {
         onStarClick={onStarClick}
         isStarred={isStarred}/>
         )
-      })};
+      })}
     
 </FlexGrid>
   )

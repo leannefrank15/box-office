@@ -8,7 +8,7 @@ const MainPageLayout = ({children}) => {
       
       <Title
       title="Box Office"
-      subtitle="Are you looking for a movie or an actor?"
+      subtitle="Lookin for a movie or an actor?"
        />
 
       <Navs />
