@@ -3,10 +3,11 @@ import ActorGrid from '../components/actor/ActorGrid';
 import MainPageLayout from '../components/MainPageLayout'
 import ShowGrid from '../components/show/ShowGrid';
 import {api_funct} from '../misc/config'
+import { useLastQuery } from '../misc/custom-hooks';
 
 const Home = () => {
 
-  const [input_state, setInput] = useState(''); //creating state object
+  const [input_state, setInput] = useLastQuery(); //creating state object
   const [results, setResult] = useState(null); //creating state object for storing array of search results
   const [searchOption, setSearchOption] = useState('shows'); //creating state to store radio button result
 
