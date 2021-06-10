@@ -4,7 +4,7 @@ import { FlexGrid } from '../styles'
 import ShowCard from './ShowCard'
 import {useShows} from '../../misc/custom-hooks'
 
-const ShowGrid = ({data}) => {
+export const ShowGrid = ({data}) => {
 
   const [starredShows, dispatchStarred] = useShows();
   return(
