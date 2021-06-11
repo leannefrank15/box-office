@@ -1,5 +1,5 @@
-![1](https://user-images.githubusercontent.com/83283144/121681329-4daf1a80-cad8-11eb-9c1c-8c24034ca4b4.JPG)
-![2](https://user-images.githubusercontent.com/83283144/121681332-4ee04780-cad8-11eb-8554-4709fb24f3c5.JPG)
+![1](https://user-images.githubusercontent.com/83283144/121726648-7949f900-cb08-11eb-8350-8e6e1ac74755.JPG)
+![2](https://user-images.githubusercontent.com/83283144/121726661-7c44e980-cb08-11eb-80d1-c09d0b0200bc.JPG)
 
 
 # box-office
