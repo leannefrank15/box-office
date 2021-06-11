@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import {NavList, LinkStyled } from './show/Navs.styled'
 import {useLocation} from 'react-router-dom'
 
@@ -24,4 +24,4 @@ import {useLocation} from 'react-router-dom'
   )
 }
 
-export default Navs
+export default memo(Navs)

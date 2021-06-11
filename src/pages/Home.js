@@ -42,9 +42,6 @@ const Home = () => {
     setSearchOption(event_obj.target.value);
 
   }
-  console.log(searchOption);
-
-  console.log(results);
 
   const displayResult = () => {
     if (results && results.length === 0) {
