@@ -19,7 +19,7 @@ const Seasons = ({ seasons }) => {
             <div className="left">
               <p>Season {season.number}</p>
               <p>
-                Episodes: <span>{season.episodeOrder}</span>
+                Episodes: <span>{season.episodeOrder || 'not known'}</span>
               </p>
             </div>
             <div className="right">

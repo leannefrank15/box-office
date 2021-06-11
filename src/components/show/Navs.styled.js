@@ -14,9 +14,11 @@ margin: 0 10px;
 padding: 3px 15px;
 position: relative;
 text-decoration: none;
-color: ${({ theme }) => theme.mainColors.gray};
+
+color: gray;
+
 &.active {
-  color: ${({ theme }) => theme.mainColors.blue};
+  color: blue;
   &:after {
     content: '';
     position: absolute;
@@ -24,7 +26,7 @@ color: ${({ theme }) => theme.mainColors.gray};
     height: 2px;
     left: 0%;
     bottom: 0;
-    background-color: ${({ theme }) => theme.mainColors.blue};
+    background-color: blue;
     animation: slide-in 0.3s ease-in forwards;
     @keyframes slide-in {
       from {

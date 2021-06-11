@@ -6,11 +6,13 @@ import {Star} from '../styles'
 const ShowCard = ({ id, image, name, summary, onStarClick, isStarred }) => {
   
   const summaryAsText = summary
-    ? `${summary.split(' ').slice(0,15).join(' ').replace(/<.+?>/g, "")}...`
+    ? `${summary.split(' ').slice(0,13).join(' ').replace(/<.+?>/g, "")}...`
     : 'No description';
 
   return (
+
     <StyledShowCard>
+
       <div className='img-wrapper'>
         <img src={image} alt="show"/>
       </div>
@@ -20,11 +22,12 @@ const ShowCard = ({ id, image, name, summary, onStarClick, isStarred }) => {
       <p style={{fontWeight: 'normal'}}>{summaryAsText}</p><br/>
 
       <div className='btns'>
-        <Link style={{textDecoration: 'none', marginRight: '25px'}} to={`/show/${id}`}>Read more</Link>
+        <Link style={{textDecoration: 'none', marginRight: '25px', fontWeight: 'bold', padding: '3px'}} to={`/show/${id}`}>Read more</Link>
         <button style={{marginLeft: '45px'}}type="button" onClick={onStarClick}>
           <Star active={isStarred}/>
         </button>
       </div>
+      
     </StyledShowCard>
   )
 }

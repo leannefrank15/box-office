@@ -16,11 +16,11 @@ flex-wrap: wrap;
 }
 
 .pic-wrapper {
-  width: 50px;
+  width: 60px;
   min-width: 50px;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 15%;
   img {
     object-fit: cover;
     width: 100%;

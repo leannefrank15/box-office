@@ -8,14 +8,14 @@ img {
   min-width: 250px;
   width: 300px;
   max-height: 450px;
-  border: 1px solid #ddd;
+  border: 1px solid white;
   border-radius: 40px;
 }
 
 .text-side {
   margin-left: 20px;
   .summary {
-    color: #5f5f5f;
+    color: #778899;
     line-height: 1.5;
   }
 }
@@ -62,7 +62,7 @@ span {
   margin: 6px;
   margin-bottom: 0;
   color: blue;
-  background-color: mintcream;
+  background-color: linen;
   padding: 3px 13px;
   border-radius: 20px;
   font-size: 14px;

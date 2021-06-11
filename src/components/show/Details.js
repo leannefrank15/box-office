@@ -1,5 +1,6 @@
 import React from 'react'
 import { DetailsWrapper } from './Details.styled';
+import {Link} from 'react-router-dom'
 
 const Details = ({ status, premiered, network }) => {
   return (
@@ -7,6 +8,7 @@ const Details = ({ status, premiered, network }) => {
       <p>
         Status: <span>{status}</span>
       </p>
+      
       <p>
         Premiered {premiered} {network ? `on ${network.name}` : null}
       </p>

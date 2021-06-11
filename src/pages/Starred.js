@@ -36,10 +36,10 @@ const Starred = () => {
   return (
   
     <MainPageLayout>
-      {isLoading && <div style={{textAlign: 'center'}}>Shows are stil loading</div>}
+      {isLoading && <div style={{alignContent: 'center'}}>Shows are stil loading....</div>}
        {error && <div>Error occourred: {error}</div>}
        {!isLoading && !shows && <div>No shows were added</div>}
-       {!isLoading && !error && shows && <ShowGrid data={shows}/>}
+       {!isLoading && !error && shows && <ShowGrid data={shows} />}
     </MainPageLayout>
     
   )

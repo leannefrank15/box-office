@@ -7,7 +7,7 @@ const MainPageLayout = ({children}) => {
     <div>
       
       <Title
-      title="Box Office"
+      title="Movie Search"
       subtitle="Lookin for a movie or an actor?"
        />
 

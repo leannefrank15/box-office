@@ -2,15 +2,14 @@ import styled from 'styled-components'
 import { SearchCard } from '../styles'
 
 export const StyledShowCard = styled (SearchCard)`
+
 .btns {
     margin-top: 15px;
     display: flex;
     align-items: center;
     a {
-      text-decoration-color: #000;
-      color: #000;
+      color: #addfad;
       &:hover {
-        text-decoration-color: blue;
         color: blue;
       }
     }

@@ -56,7 +56,7 @@ const Home = () => {
     return null;  // if neither of the conditions suffice , it'll return nothing
   }
   return (
-  
+    
     <MainPageLayout>
      <SearchInput type='text' onChange={onEventChange} value={input_state} onKeyDown={onKeyDown} placeholder="search for something" /> 
   
@@ -65,7 +65,7 @@ const Home = () => {
        <RadioInputsWrapper>
 
          <label htmlFor="shows-search" >
-           Shows
+           Movies
            </label>
            <input type="radio" 
            id="shows-search" 
@@ -94,6 +94,7 @@ const Home = () => {
 
      <div><h4>{displayResult()}</h4></div>
     </MainPageLayout>
+    
     
   )
 }

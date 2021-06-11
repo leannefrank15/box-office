@@ -22,25 +22,27 @@ const Show = () => {
     return <div>oops! error occourred </div>
   }
   return (
+  
     <ShowPageWrapper>
-      <ShowMainData image={show.image} name={show.name} rating={show.rating} summary={show.summary} tags={show.genres}/>
+      <ShowMainData image={show.image} name={show.name} rating={show.rating} summary={show.summary} tags={show.genres ? show.genres : null}/>
 
       <InfoBlock>
-        <h2>Details</h2>
+        <h2><u>Details:</u></h2>
         <Details status={show.status} network={show.network} premiered={show.premiered}/>
       </InfoBlock>
 
       <InfoBlock>
-        <h2>Seasons</h2>
+        <h2><u>Seasons:</u></h2>
         <Seasons seasons={show._embedded.seasons}/>
       </InfoBlock>
 
       <InfoBlock>
-        <h2>Cast</h2>
+        <h2><u>Cast:</u></h2>
         <Cast cast={show._embedded.cast}/>
       </InfoBlock>
 
     </ShowPageWrapper>
+    
   )
 }
 
