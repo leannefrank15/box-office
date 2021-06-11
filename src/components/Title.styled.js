@@ -9,6 +9,7 @@ h1 {
   letter-spacing: 10px;
   text-transform: uppercase;
   margin: 0 0 10px;
+  margin-top: 30px;
 }
 
 p {
