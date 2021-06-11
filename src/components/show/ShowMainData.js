@@ -5,6 +5,7 @@ import { Headline, MainDataWrapper, TagList } from './ShowMainData.styled';
 
 const ShowMainData = ({ name, rating, summary, tags, image }) => {
   return (
+   
     <MainDataWrapper>
       <img src={image ? image.original : IMG_PLACEHOLDER} alt="show-cover" />
       <div className='text-side'>
@@ -27,6 +28,7 @@ const ShowMainData = ({ name, rating, summary, tags, image }) => {
         </div>
       </div>
     </MainDataWrapper>
+   
   );
 };
 

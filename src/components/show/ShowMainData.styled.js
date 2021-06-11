@@ -62,7 +62,7 @@ span {
   margin: 6px;
   margin-bottom: 0;
   color: blue;
-  background-color: #d0c9ff;
+  background-color: mintcream;
   padding: 3px 13px;
   border-radius: 20px;
   font-size: 14px;

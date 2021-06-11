@@ -8,6 +8,7 @@ export const ShowGrid = ({data}) => {
 
   const [starredShows, dispatchStarred] = useShows();
   return(
+    
     <FlexGrid>
       {data.map(({show}) => 
       {
@@ -34,6 +35,7 @@ export const ShowGrid = ({data}) => {
       })}
     
 </FlexGrid>
+
   )
 }
 
