@@ -51,8 +51,8 @@ export function App() {
       <center>
       <button onClick={()=> themeToggler()} style={{
           display: 'flex',
-          padding: '10px',
-          marginLeft : '85%',
+          padding: '5px',
+          marginLeft : '80%',
           fontSize: '15px',
           border: 'none',
           outline: 'none',
@@ -75,8 +75,8 @@ export function App() {
       <center>
       <button onClick={()=> themeToggler()} style={{
           display: 'flex',
-          padding: '10px',
-          marginLeft : '85%',
+          padding: '5px',
+          marginLeft : '80%',
           fontSize: '15px',
           border: 'none',
           outline: 'none',
