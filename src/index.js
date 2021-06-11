@@ -4,6 +4,7 @@ import './index.css';
 import { HashRouter } from 'react-router-dom'
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
+import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
@@ -15,3 +16,4 @@ ReactDOM.render(
 
 
 serviceWorkerRegistration.register();
+reportWebVitals();
